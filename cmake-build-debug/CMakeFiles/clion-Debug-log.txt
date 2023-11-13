@@ -1,10 +1,10 @@
-"C:\Program Files\JetBrains\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\noyan\OneDrive\Bureau\ECE\Ing2\Semestre 1\Théorie_des_graphes\Projet\optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0" -B "C:\Users\noyan\OneDrive\Bureau\ECE\Ing2\Semestre 1\Théorie_des_graphes\Projet\optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0\cmake-build-debug"
--- The C compiler identification is GNU 13.1.0
+"D:\Users\gabri\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\gabri\CLionProjects\ING2\optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0 -B C:\Users\gabri\CLionProjects\ING2\optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0\cmake-build-debug
+-- The C compiler identification is GNU 6.3.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/gcc.exe - skipped
+-- Check for working C compiler: C:/Users/gabri/Desktop/ECE 1/Algo/MinGW/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Configuring done (2.6s)
+-- Configuring done (3.6s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/Users/noyan/OneDrive/Bureau/ECE/Ing2/Semestre 1/Théorie_des_graphes/Projet/optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0/cmake-build-debug
+-- Build files have been written to: C:/Users/gabri/CLionProjects/ING2/optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024-2-0/cmake-build-debug
