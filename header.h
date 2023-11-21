@@ -19,7 +19,6 @@ Noeud* creerNoeud(int sommet);
 
 Graphe* creerGraphe(int nbsommet);
 FILE* ouvrirFichier(char* nomFichier);
-void fermerFichier(FILE* fichier);
 void ajouterArete(Graphe* graphe, int src, int dest);
 void PredecesseursRecursif(Graphe* graphe, int sommet, int sommetInitial, int visite[]);
 void Predecesseurs(Graphe* graphe);

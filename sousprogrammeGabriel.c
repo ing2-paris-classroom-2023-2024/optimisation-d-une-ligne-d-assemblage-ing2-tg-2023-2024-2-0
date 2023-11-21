@@ -1,6 +1,3 @@
-//
-// Created by gabri on 21/11/2023.
-//
 #include "header.h"
 
 Noeud* creerNoeud(int sommet) {
@@ -23,18 +20,13 @@ Graphe* creerGraphe(int nbsommet) {
 }
 
 FILE* ouvrirFichier(char* nomFichier) {
-    FILE* fichier = fopen(nomFichier, "r");
+    FILE *fichier = fopen(nomFichier, "r");
     if (fichier == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         exit(EXIT_FAILURE);
     }
     return fichier;
 }
-
-void fermerFichier(FILE* fichier) {
-    fclose(fichier);
-}
-
 
 void ajouterArete(Graphe* graphe, int depart, int arrive) {
     // Ajouter l'arc dest -> src (inverse de la direction)
@@ -109,7 +101,7 @@ void algorithemPertsanspoids() {
     printf("\nAffichage des predecesseurs :\n");
     Predecesseurs(graphe);
 
-    fermerFichier(fichier);
+    fclose(fichier);
 }
 
 
