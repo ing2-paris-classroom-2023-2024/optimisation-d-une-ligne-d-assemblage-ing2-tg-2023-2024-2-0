@@ -3,8 +3,6 @@
 //
 #include "header.h"
 
-
-
 Noeud* creerNoeud(int sommet) {
     Noeud* nouveauNoeud = (Noeud*)malloc(sizeof(Noeud));
     nouveauNoeud->sommet = sommet;
