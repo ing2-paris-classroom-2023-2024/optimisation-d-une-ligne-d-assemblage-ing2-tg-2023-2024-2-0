@@ -88,7 +88,7 @@ void Predecesseurs(Graphe* graphe) {
 
 
 void algorithemPertsanspoids() {
-    char* nomFichier = "votre_fichier.txt";
+    char* nomFichier = "algo_gab.txt";
 
     FILE* fichier = ouvrirFichier(nomFichier);
 
