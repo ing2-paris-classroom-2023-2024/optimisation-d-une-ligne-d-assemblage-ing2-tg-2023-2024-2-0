@@ -46,7 +46,14 @@ void probleme_affectation(struct AssignmentProblem *problem);
 
 ////////////////////////////////Programme Julien//////////////////////////////
 
-void algoTempsdeCycle();
+// Structure pour représenter une opération
+typedef struct {
+    int numOperation;
+    float executionTime;
+} Operation;
+
+Operation* lireOperations();
+float lireTempsDeCycle()
 
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TG_2023_2024_2_0_HEADER_H

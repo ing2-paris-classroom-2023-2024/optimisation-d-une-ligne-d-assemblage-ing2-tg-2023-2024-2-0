@@ -10,4 +10,5 @@ add_executable(optimisation_d_une_ligne_d_assemblage_ing2_tg_2023_2024_2_0
         main.c
         sousprogrammeGabriel.c
         sous_programme_Julien.c
+        sous_programmes_Max.c
 )
