@@ -44,5 +44,9 @@ int affectation_valide(const int *stations, const struct ExclusionConstraint *co
 int station_min_conflit(const int *stations, const struct ExclusionConstraint *constraints, int numConstraints, int currentOperation);
 void probleme_affectation(struct AssignmentProblem *problem);
 
+////////////////////////////////Programme Julien//////////////////////////////
+
+void algoTempsdeCycle();
+
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TG_2023_2024_2_0_HEADER_H
