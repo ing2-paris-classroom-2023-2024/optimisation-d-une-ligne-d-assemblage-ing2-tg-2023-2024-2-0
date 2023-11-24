@@ -22,6 +22,7 @@ Noeud* creerNoeud(int sommet);
 
 Graphe* creerGraphe(int nbsommet);
 FILE* ouvrirFichier(char* nomFichier);
+void fermerFichier(FILE* fichier);
 void ajouterArete(Graphe* graphe, int src, int dest);
 void PredecesseursRecursif(Graphe* graphe, int sommet, int sommetInitial, int visite[]);
 void Predecesseurs(Graphe* graphe);
@@ -43,17 +44,6 @@ int nbr_stations(const int *stations);
 int affectation_valide(const int *stations, const struct ExclusionConstraint *constraints, int numConstraints, int currentOperation, int currentStation);
 int station_min_conflit(const int *stations, const struct ExclusionConstraint *constraints, int numConstraints, int currentOperation);
 void probleme_affectation(struct AssignmentProblem *problem);
-
-////////////////////////////////Programme Julien//////////////////////////////
-
-// Structure pour représenter une opération
-typedef struct {
-    int numOperation;
-    float executionTime;
-} Operation;
-
-Operation* lireOperations();
-float lireTempsDeCycle()
 
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TG_2023_2024_2_0_HEADER_H
