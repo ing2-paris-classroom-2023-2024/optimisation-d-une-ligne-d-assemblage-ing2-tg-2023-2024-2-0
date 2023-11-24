@@ -1,7 +1,6 @@
 #include "header.h"
 
 int main(){
-
 ////////////////Sous Programme Gabriel/////////////////
     algorithemPertsanspoids();
 
