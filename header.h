@@ -54,6 +54,6 @@ typedef struct {
 } Operation;
 
 Operation* lireOperations();
-float lireTempsDeCycle()
+float lireTempsDeCycle();
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TG_2023_2024_2_0_HEADER_H
