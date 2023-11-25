@@ -1,4 +1,9 @@
+//
+// Created by gabri on 21/11/2023.
+//
 #include "header.h"
+
+
 
 Noeud* creerNoeud(int sommet) {
     Noeud* nouveauNoeud = (Noeud*)malloc(sizeof(Noeud));
@@ -82,17 +87,73 @@ void Predecesseurs(Graphe* graphe) {
 }
 
 
+int totalaretes (char *nomFichier){
+    FILE* fichier = fopen(nomFichier, "r");
+    if (fichier == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        exit(EXIT_FAILURE);
+    }
+    int nombre;
+    int totalaretes = 0;
+    // Lire chaque caractère du fichier
+    while ((nombre = fgetc(fichier)) != EOF) {
+        // Si le caractère est un saut de ligne, incrémenter le compteur de lignes
+        if (nombre == '\n') {
+            totalaretes++;
+        }
+    }
+
+    // Fermer le fichier
+    fclose(fichier);
+
+
+    return totalaretes; // Retourne le nombre total d'aretes
+}
+
+
+int totalSommet(char *nomFichier,int totalaretes){
+    FILE* fichier = fopen(nomFichier, "r");
+    if (fichier == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        exit(EXIT_FAILURE);
+    }
+    int nombretest = 0;
+    for (int i = 0; i < totalaretes; ++i) {
+        int depart, arrive;
+        if (fscanf(fichier, "%d %d", &depart, &arrive) == 2) {
+            if (nombretest<depart){
+                nombretest=depart;
+            }
+            if (nombretest<arrive){
+                nombretest=arrive;
+            }
+        } else {
+            printf("Erreur de lecture de l'arc %d\n", i + 1);
+        }
+    }
+    fclose(fichier);
+
+    return nombretest;
+}
+
+
 void algorithemPertsanspoids() {
     char* nomFichier = "algo_gab.txt";
 
     FILE* fichier = ouvrirFichier(nomFichier);
 
-    int totalSommets = 35; //Trouver le moyen de prendre ce nombre sans l'imposer
+    //trouver le moyen de voir le nombre d'arrete sans l'imposer
+    int nbAretes= totalaretes(nomFichier);
+
+    //Trouver le moyen de prendre ce nombre sans l'imposer
+    int totalSommets = totalSommet(nomFichier,nbAretes);
     Graphe* graphe = creerGraphe(totalSommets);
 
-    int nbAretes = 35;//trouver le moyen de voir le nombre d'arrete sans l'imposer
 
-    printf("Nombre d'arêtes : %d\n", nbAretes);
+
+
+    printf("Nombre d'aretes : %d\n", nbAretes);
+    printf("Nombre sommets : %d\n", totalSommets);
 
     for (int i = 0; i < nbAretes; ++i) {
         int depart, arrive;

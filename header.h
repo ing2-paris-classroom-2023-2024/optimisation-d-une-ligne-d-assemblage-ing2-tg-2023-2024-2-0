@@ -27,6 +27,8 @@ void ajouterArete(Graphe* graphe, int src, int dest);
 void PredecesseursRecursif(Graphe* graphe, int sommet, int sommetInitial, int visite[]);
 void Predecesseurs(Graphe* graphe);
 void algorithemPertsanspoids();
+int totalaretes (char *nomFichier);
+int totalSommet(char *nomFichier,int totalaretes);
 
 
 ////////////////////////////////Programme Maxime//////////////////////////////
