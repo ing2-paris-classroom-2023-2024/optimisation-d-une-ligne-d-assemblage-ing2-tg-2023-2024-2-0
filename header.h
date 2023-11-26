@@ -55,7 +55,18 @@ typedef struct {
     float executionTime;
 } Operation;
 
-Operation* lireOperations();
+// Structure pour représenter une tâche
+typedef struct {
+    int numeroTache;
+    Operation* operations;
+    int nombreOperations;
+} Tache;
+
+Operation* lireOperations(int *nombreOperations);
+void trierOperations(Operation* operations, int nombreOperations);
+void afficherOperations(Operation* operations, int nombreOperations);
+Tache* creerTaches(Operation* operations, int nombreOperations, int* nombreTaches);
+void afficherTaches(Tache* taches, int nombreTaches);
 float lireTempsDeCycle();
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TG_2023_2024_2_0_HEADER_H
