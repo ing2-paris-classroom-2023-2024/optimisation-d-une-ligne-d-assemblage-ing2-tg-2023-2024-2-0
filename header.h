@@ -41,7 +41,7 @@ struct AssignmentProblem {
     int numConstraints;
 };
 
-void initialisation_stations(int *stations);
+void initialisation_stations(struct AssignmentProblem *problem);
 int nbr_stations(const int *stations);
 int affectation_valide(const int *stations, const struct ExclusionConstraint *constraints, int numConstraints, int currentOperation, int currentStation);
 int station_min_conflit(const int *stations, const struct ExclusionConstraint *constraints, int numConstraints, int currentOperation);

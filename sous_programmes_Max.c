@@ -1,10 +1,11 @@
 #include "header.h"
 
 // Initialise toutes les stations à zéro
-void initialisation_stations(int *stations) {
+void initialisation_stations(struct AssignmentProblem *problem) {
     for (int i = 0; i < NUM_OPERATIONS; ++i) {
-        stations[i] = 0;
+        problem->stations[i] = 0;
     }
+    problem->numConstraints = 0;
 }
 
 // Compte le nombre de stations distinctes utilisées
@@ -66,7 +67,7 @@ int station_min_conflit(const int *stations, const struct ExclusionConstraint *c
 
 // Résout le problème d'affectation
 void probleme_affectation(struct AssignmentProblem *problem) {
-    initialisation_stations(problem->stations);
+    initialisation_stations(problem);
 
     // Ouverture du fichier contenant les contraintes
     FILE *file = fopen("exclusions.txt", "r");
@@ -76,7 +77,6 @@ void probleme_affectation(struct AssignmentProblem *problem) {
         perror("Erreur lors de l'ouverture du fichier");
         exit(1);
     }
-
     // Lecture des contraintes depuis le fichier
     while (fscanf(file, "%d %d", &problem->exclusionConstraints[problem->numConstraints].operation1,
                   &problem->exclusionConstraints[problem->numConstraints].operation2) == 2) {

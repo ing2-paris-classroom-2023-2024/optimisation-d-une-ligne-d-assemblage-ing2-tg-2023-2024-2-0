@@ -110,13 +110,13 @@ Tache* creerTaches(Operation* operations, int nombreOperations, int* nombreTache
 
 // Fonction pour afficher les tâches
 void afficherTaches(Tache* taches, int nombreTaches) {
-    printf("Tâches créées :\n");
+    printf("Taches creees :\n");
     for (int i = 0; i < nombreTaches; ++i) {
         printf("Tâche %d :\n", taches[i].numeroTache);
         for (int j = 0; j < taches[i].nombreOperations; ++j) {
-            printf("    Numéro d'opération : %d, Temps d'exécution : %.2f\n", taches[i].operations[j].numOperation, taches[i].operations[j].executionTime);
+            printf("    Numero d'operation : %d, Temps d'execution : %.2f\n", taches[i].operations[j].numOperation, taches[i].operations[j].executionTime);
         }
-        printf("---- Fin de la tâche ----\n");
+        printf("---- Fin de la tache ----\n");
     }
 }
 
